@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../../public/fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *:-webkit-autofill,
+  *:-webkit-autofill:hover,
+  *:-webkit-autofill:focus,
+  *:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  }
+  html {
+    font-family: 'IBMPlexSans-Medium', sans-serif;
+  }
+  body {
+    @apply bg-almost-white;
+  }
+}
+
+@layer components {
+  .my-table-spacing {
+    border-spacing: 0 1em;
+  }
+}

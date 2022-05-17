@@ -1,0 +1,70 @@
+image: node:16
+
+stages:
+  - bootstrap
+  - stage-1
+  - deploy
+
+cache:
+  key:
+    files:
+      - yarn.lock
+  paths:
+    - node_modules/
+
+install:
+  stage: bootstrap
+  script:
+    - yarn
+  artifacts:
+    paths:
+      - node_modules/
+
+lint:
+  stage: stage-1
+  script:
+    - yarn lint
+    - yarn prettier -c ./src/
+  cache:
+    policy: pull
+
+# Comment this out when there are some tests
+# test:
+#   stage: stage-1
+#   script:
+#     - yarn test
+#   needs:
+#     - install
+
+storybook:
+  stage: stage-1
+  script:
+    - yarn build-storybook
+  artifacts:
+    paths:
+      - storybook-static/
+  cache:
+    policy: pull
+
+build:
+  stage: stage-1
+  script:
+    # - yarn get-schema
+    - yarn relay:build
+    - yarn build
+    - yarn export
+  artifacts:
+    paths:
+      - out/
+  cache:
+    policy: pull
+
+deploy:
+  stage: deploy
+  script:
+    - yarn attach-storybook
+  artifacts:
+    paths:
+      - out/
+  cache:
+    policy: pull
