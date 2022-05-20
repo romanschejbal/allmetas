@@ -50,7 +50,7 @@ build:
   stage: stage-1
   script:
     # - yarn get-schema
-    - yarn relay:build
+    # - yarn relay:build
     - yarn build
     - yarn export
   artifacts:
