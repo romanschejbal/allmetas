@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
+  font-weight: 400;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +17,7 @@
     -webkit-box-shadow: 0 0 0px 1000px #fff inset;
   }
   html {
+    font-family: 'IBMPlexSans-Medium', sans-serif;
   }
   body {
     @apply bg-almost-white;

@@ -25,6 +25,7 @@ module.exports = {
       gray: '#ADADAD',
       'gray-dark': '#666666',
       transparent: 'transparent',
+      darkTypo: '#002033',
     },
     fontSize: {
       xxs: '0.6875rem',
@@ -73,5 +74,5 @@ module.exports = {
       backgroundColor: ['odd', 'even'],
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp')],
 };

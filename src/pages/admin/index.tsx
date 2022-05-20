@@ -5,7 +5,7 @@ import {
   HydraAdmin,
 } from '@api-platform/admin';
 import { parseHydraDocumentation } from '@api-platform/api-doc-parser';
-import { getToken } from 'src/fetchGraphQL';
+import { getToken } from '../../fetchGraphQL';
 
 const getHeaders = () =>
   getToken()
