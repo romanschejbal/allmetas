@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'OpenSans';
-  src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
-  font-weight: 400;
-  font-style: normal;
+	font-family: 'OpenSans';
+	src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100&display=swap');
+	font-weight: 400;
+	font-style: normal;
 }
 
 @tailwind base;
@@ -10,22 +10,22 @@
 @tailwind utilities;
 
 @layer base {
-  *:-webkit-autofill,
-  *:-webkit-autofill:hover,
-  *:-webkit-autofill:focus,
-  *:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-  }
-  html {
-    font-family: 'IBMPlexSans-Medium', sans-serif;
-  }
-  body {
-    @apply bg-almost-white;
-  }
+	*:-webkit-autofill,
+	*:-webkit-autofill:hover,
+	*:-webkit-autofill:focus,
+	*:-webkit-autofill {
+		-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+	}
+	html {
+		font-family: 'IBMPlexSans-Medium', sans-serif;
+	}
+	body {
+		@apply bg-almost-white;
+	}
 }
 
 @layer components {
-  .my-table-spacing {
-    border-spacing: 0 1em;
-  }
+	.my-table-spacing {
+		border-spacing: 0 1em;
+	}
 }
