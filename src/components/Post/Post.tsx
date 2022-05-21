@@ -6,11 +6,13 @@ interface IProps {
 }
 
 const Feed: FC<IProps> = ({ title, description }) => (
-	<div className="w-[340px]">
+	<li className="grid w-[340px] gap-4">
 		<div className="h-[192px] w-full rounded-lg bg-darkTypo" />
-		<h3 className="text-lg font-bold text-darkTypo line-clamp-1">{title}</h3>
-		<p className="text-darkTypo line-clamp-2">{description}</p>
-	</div>
+		<div className="grid gap-1.5">
+			<h3 className="text-lg font-bold text-darkTypo line-clamp-1">{title}</h3>
+			<p className="text-darkTypo line-clamp-2">{description}</p>
+		</div>
+	</li>
 );
 
 export default Feed;
