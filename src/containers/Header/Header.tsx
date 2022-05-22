@@ -1,15 +1,24 @@
 import { HeaderInfo, Logo, SearchInput } from '$components';
 import { HEADER_ITEMS } from '$mocks';
+import classNames from 'classnames';
 import { FC } from 'react';
 
-const Header: FC = () => {
-	return (
-		<div className="grid grid-cols-3 items-center">
-			<Logo />
-			<HeaderInfo items={HEADER_ITEMS} />
-			<SearchInput />
+interface IProps {
+	darkMode: boolean;
+}
+
+const Header: FC<IProps> = ({ darkMode }) => (
+	<div
+		className={classNames({
+			['bg-[#131313]']: darkMode,
+		})}
+	>
+		<div className="container m-auto grid grid-cols-4 items-center py-3.5">
+			<Logo darkMode={darkMode} />
+			<HeaderInfo items={HEADER_ITEMS} darkMode={darkMode} />
+			<SearchInput darkMode={darkMode} />
 		</div>
-	);
-};
+	</div>
+);
 
 export default Header;
