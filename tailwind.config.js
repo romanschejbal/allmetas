@@ -15,6 +15,8 @@ module.exports = {
 			black: '#000000',
 			grey: '#636363',
 			darkTypo: '#002033',
+			terracotta: '#9F4505',
+			terracottaLightTrnsp: '#FF6A0000',
 		},
 		fontSize: {
 			xxs: '0.6875rem',

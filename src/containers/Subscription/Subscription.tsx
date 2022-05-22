@@ -7,7 +7,7 @@ interface IProps {
 }
 
 const Subscription: FC<IProps> = ({ title, text }) => (
-	<div className="bg-darkTypo">
+	<div className=" bg-gradient-to-r from-terracotta to-terracottaLightTrnsp">
 		<div className="grid grid-cols-2 px-32 pt-16 pb-24">
 			<div className="grid grid-flow-row gap-10">
 				<div className="grid grid-flow-row gap-4">
