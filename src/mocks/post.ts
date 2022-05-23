@@ -7,6 +7,6 @@ const POST = {
 		'"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 };
 
-const POSTS_AMOUNT = 30;
+const POSTS_AMOUNT = 15;
 
 export const POSTS = repeatMock(POST, POSTS_AMOUNT);
