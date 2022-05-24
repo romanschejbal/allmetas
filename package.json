@@ -36,7 +36,7 @@
 		"react-ranger": "^2.1.0",
 		"react-relay": "^13.0.1",
 		"react-spring": "^9.4.2",
-		"react-table": "^7.7.0",
+		"react-table": "^7.8.0",
 		"relay-runtime": "^13.0.1",
 		"yup": "^0.32.11"
 	},

@@ -1,11 +1,7 @@
 import type { NextPage } from 'next';
-import { Feed, MainLayout } from '$containers';
-import { POSTS } from '$mocks';
+import { POSTS, ROWS } from '$mocks';
+import { Home } from '$containers';
 
-const Dashboard: NextPage = () => (
-	<MainLayout>
-		<Feed items={POSTS} />
-	</MainLayout>
-);
+const Dashboard: NextPage = () => <Home posts={POSTS} rows={ROWS} />;
 
 export default Dashboard;
