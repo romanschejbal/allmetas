@@ -20,7 +20,10 @@ module.exports = {
 			cursedBlack: '#131313',
 			lunarRock: '#c5c5c5',
 			blue: '#004168',
-			coldGrey: '#9f9f9f'
+			coldGrey: '#9f9f9f',
+			grayTypo: '#9A9EA6',
+			solitude: '#e3ebfd',
+			royalBlue: '#4475f2',
 		},
 		fontSize: {
 			xxs: '0.6875rem',
