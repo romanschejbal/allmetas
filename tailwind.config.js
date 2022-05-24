@@ -20,6 +20,10 @@ module.exports = {
 			lavender: '#E7E7ED',
 			whisper: '#E4E4E4',
 			snow: '#FAFAFA',
+			cursedBlack: '#131313',
+			lunarRock: '#c5c5c5',
+			blue: '#004168',
+			coldGrey: '#9f9f9f'
 		},
 		fontSize: {
 			xxs: '0.6875rem',
@@ -68,5 +72,9 @@ module.exports = {
 			backgroundColor: ['odd', 'even'],
 		},
 	},
-	plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp')],
+	plugins: [
+		require('@tailwindcss/forms'),
+		require('@tailwindcss/line-clamp'),
+		require('tailwind-scrollbar-hide'),
+	],
 };

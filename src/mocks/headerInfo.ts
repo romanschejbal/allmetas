@@ -26,3 +26,5 @@ export const HEADER_ITEMS = [
 		value: getRamdomNumber(),
 	},
 ];
+
+export const DARK_MODE_DEFAULT_STATE = false;

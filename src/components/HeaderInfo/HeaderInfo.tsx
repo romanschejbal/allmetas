@@ -1,15 +1,16 @@
 import { FC } from 'react';
-import { Item } from './Item';
+import { HeaderInfoItem } from './HeaderInfoItem';
 import { IHeaderItem } from '$models';
 
 interface IProp {
 	items: IHeaderItem[];
+	darkMode: boolean;
 }
 
-const HeaderInfo: FC<IProp> = ({ items }) => (
-	<div className="grid grid-cols-4 gap-3">
+const HeaderInfo: FC<IProp> = ({ items, darkMode }) => (
+	<div className="col-span-2 grid grid-cols-4 gap-3 justify-self-center">
 		{items.map(({ id, title, info, value }) => (
-			<Item key={id} title={title} info={info} value={value} />
+			<HeaderInfoItem key={id} title={title} info={info} value={value} darkMode={darkMode} />
 		))}
 	</div>
 );
