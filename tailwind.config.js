@@ -26,6 +26,12 @@ module.exports = {
 			'gray-dark': '#666666',
 			transparent: 'transparent',
 			darkTypo: '#002033',
+			safetyOrange: '#ff6a00',
+			kashmirBlue: '#58667E',
+			hemp: '#987C6F',
+			limeGreen: '#16C612',
+			cinnabar: '#EA2626',
+			blackPearl: '#002033',
 		},
 		fontSize: {
 			xxs: '0.6875rem',

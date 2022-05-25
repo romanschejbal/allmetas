@@ -8,7 +8,7 @@ interface IProps {
 }
 
 const Header: FC<IProps> = ({ darkMode }) => (
-	<div
+	<header
 		className={classNames({
 			['bg-[#131313]']: darkMode,
 		})}
@@ -18,7 +18,7 @@ const Header: FC<IProps> = ({ darkMode }) => (
 			<HeaderInfo items={HEADER_ITEMS} darkMode={darkMode} />
 			<SearchInput darkMode={darkMode} />
 		</div>
-	</div>
+	</header>
 );
 
 export default Header;
