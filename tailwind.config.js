@@ -28,6 +28,9 @@ module.exports = {
 			aliceBlue: '#EDF2F4',
 			kashmirBlue: '#58667E',
 			horizon: '#5C8097',
+			grayTypo: '#9A9EA6',
+			solitude: '#e3ebfd',
+			royalBlue: '#4475f2',
 		},
 		fontSize: {
 			xxs: '0.6875rem',
