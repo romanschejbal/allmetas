@@ -14,6 +14,6 @@ const ROW = {
 	lastMonth: 'lastMonth',
 };
 
-const ROWS_AMOUNT = 10;
+const ROWS_AMOUNT = 50;
 
 export const ROWS = repeatMock(ROW, ROWS_AMOUNT);

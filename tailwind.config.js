@@ -23,7 +23,11 @@ module.exports = {
 			cursedBlack: '#131313',
 			lunarRock: '#c5c5c5',
 			blue: '#004168',
-			coldGrey: '#9f9f9f'
+			coldGrey: '#9f9f9f',
+			veniceBlue: '#2F5E7B',
+			aliceBlue: '#EDF2F4',
+			kashmirBlue: '#58667E',
+			horizon: '#5C8097',
 		},
 		fontSize: {
 			xxs: '0.6875rem',
