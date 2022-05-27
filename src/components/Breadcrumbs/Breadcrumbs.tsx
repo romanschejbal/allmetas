@@ -9,7 +9,9 @@ interface IProps {
 
 const Breadcrumbs: FC<IProps> = ({ moveBack, currentPage }) => (
 	<div className="flex items-center gap-4 text-blackPearl/60">
-		<h3 onClick={moveBack} className='cursor-pointer'>{HOMEPAGE}</h3>
+		<h3 onClick={moveBack} className="cursor-pointer">
+			{HOMEPAGE}
+		</h3>
 		<Arrow />
 		<h3>{currentPage}</h3>
 	</div>

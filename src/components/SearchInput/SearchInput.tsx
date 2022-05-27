@@ -17,10 +17,10 @@ const SearchInput: FC<IProps> = ({ darkMode }) => {
 				)}
 				<input
 					className={classNames('h-[45px]', 'w-full', 'rounded-lg', 'pl-[30px]', 'box-border', {
-						['border-[#004168]/[.28]']: !darkMode,
-						['border-[#9f9f9f]']: darkMode,
-						['bg-[#131313]']: darkMode,
-						['text-[#9f9f9f]']: darkMode,
+						['border-blue/[.28]']: !darkMode,
+						['border-coldGrey']: darkMode,
+						['bg-cursedBlack']: darkMode,
+						['text-coldGrey']: darkMode,
 					})}
 					placeholder="Search"
 					type="text"

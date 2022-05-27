@@ -16,7 +16,7 @@ const HeaderInfoItem: FC<IProps> = ({ title, info, value, darkMode }) => (
 			<h3
 				className={classNames('text-lg', 'font-bold', 'whitespace-nowrap', {
 					['text-darkTypo']: !darkMode,
-					['text-[#c5c5c5]']: darkMode,
+					['text-lunarRock']: darkMode,
 				})}
 			>
 				{title}
@@ -28,7 +28,7 @@ const HeaderInfoItem: FC<IProps> = ({ title, info, value, darkMode }) => (
 		<p
 			className={classNames({
 				['text-darkTypo']: !darkMode,
-				['text-[#c5c5c5]']: darkMode,
+				['text-lunarRock']: darkMode,
 			})}
 		>
 			{value}

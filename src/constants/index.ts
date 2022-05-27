@@ -1,2 +1,1 @@
-export * from './productsInfo';
-export * from './quotation';
+export * from './subscription';

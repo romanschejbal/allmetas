@@ -9,8 +9,8 @@ interface IProps {
 
 const Header: FC<IProps> = ({ darkMode }) => (
 	<header
-		className={classNames({
-			['bg-[#131313]']: darkMode,
+		className={classNames('shadow-header', {
+			['bg-cursedBlack']: darkMode,
 		})}
 	>
 		<div className="container m-auto grid grid-cols-4 items-center py-3.5">

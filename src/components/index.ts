@@ -6,6 +6,10 @@ import ProductInfoBanner from './ProductInfoBanner';
 import Quotation from './Quotation';
 import Breadcrumbs from './Breadcrumbs';
 import ProductDetailsBlock from './ProductDetailsBlock';
+import MailForm from './MailForm';
+import FooterLinkSection from './FooterLinkSection';
+import FooterIcon from './FooterIcon';
+import FooterDescription from './FooterDescription';
 
 export {
 	Post,
@@ -16,4 +20,8 @@ export {
 	Quotation,
 	Breadcrumbs,
 	ProductDetailsBlock,
+	MailForm,
+	FooterLinkSection,
+	FooterIcon,
+	FooterDescription,
 };

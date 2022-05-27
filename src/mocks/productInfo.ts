@@ -1,10 +1,8 @@
-import { IProductInfo } from '$models';
-
 export const HOMEPAGE = 'Home';
 
 export const PRODUCT_TITLE = 'Decentraland';
 
-export const productInfoLarge: IProductInfo = {
+export const productInfoLarge = {
 	title: 'NFT amount',
 	amount: '42,663,586,000',
 	btnValue: 'NFT markets',
@@ -13,7 +11,7 @@ export const productInfoLarge: IProductInfo = {
 	callback: () => null,
 };
 
-export const productInfoSmall: IProductInfo = {
+export const productInfoSmall = {
 	title: 'Coin Price',
 	amount: '$2.42',
 	btnValue: 'Coin markets',

@@ -20,7 +20,7 @@
 		font-family: 'IBMPlexSans-Medium', sans-serif;
 	}
 	body {
-		@apply bg-almost-white;
+		@apply bg-white;
 	}
 }
 
