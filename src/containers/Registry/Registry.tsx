@@ -1,6 +1,6 @@
-import { FC, useMemo } from 'react';
+import { FC, useCallback, useMemo } from 'react';
 import { useTable, Column, useFlexLayout, usePagination } from 'react-table';
-import { REGISTRY_INITIAL_PAGE, REGISTRY_PAGE_SIZE, REGISTRY_PAGE_SIZES } from '$constants';
+import { REGISTRY_INITIAL_PAGE_INDEX, REGISTRY_PAGE_SIZE, REGISTRY_PAGE_SIZES } from '$constants';
 import { IRegistryRow } from '$models';
 import { getAvailablePageSizes, getRowsCounterText } from '$utils';
 import RegistryHeader from './RegistryHeader';
@@ -17,14 +17,18 @@ const Registry: FC<IProps> = ({ columns, data }) => {
 		getTableBodyProps,
 		headerGroups,
 		page,
+		pageCount,
 		prepareRow,
+		gotoPage,
 		setPageSize,
+		canNextPage,
+		canPreviousPage,
 		state: { pageIndex, pageSize },
 	} = useTable(
 		{
 			columns,
 			data,
-			initialState: { pageIndex: REGISTRY_INITIAL_PAGE, pageSize: REGISTRY_PAGE_SIZE },
+			initialState: { pageIndex: REGISTRY_INITIAL_PAGE_INDEX, pageSize: REGISTRY_PAGE_SIZE },
 		},
 		useFlexLayout,
 		usePagination,
@@ -40,6 +44,11 @@ const Registry: FC<IProps> = ({ columns, data }) => {
 	const rowsCounterText = useMemo(
 		() => getRowsCounterText(pageIndex, pageSize, rowsAmount),
 		[pageIndex, pageSize, rowsAmount],
+	);
+
+	const onPageChange = useCallback(
+		({ selected }: { selected: number }) => gotoPage(selected),
+		[gotoPage],
 	);
 
 	return (
@@ -90,7 +99,14 @@ const Registry: FC<IProps> = ({ columns, data }) => {
 						</table>
 					</div>
 				</div>
-				<RegistryFooter rowsCounterText={rowsCounterText} />
+				<RegistryFooter
+					canPreviousPage={canPreviousPage}
+					canNextPage={canNextPage}
+					pageIndex={pageIndex}
+					pageCount={pageCount}
+					rowsCounterText={rowsCounterText}
+					onPageChange={onPageChange}
+				/>
 			</div>
 		</div>
 	);
