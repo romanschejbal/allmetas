@@ -52,7 +52,7 @@ const Registry: FC<IProps> = ({ columns, data }) => {
 	);
 
 	return (
-		<div className="container m-auto rounded-lg px-10 pb-6 pt-8 shadow-[0_6px_25px_rgba(0,0,0,0.15)]">
+		<div className="container rounded-lg px-10 pb-6 pt-8 shadow-primary">
 			<div className="grid gap-9">
 				<div className="grid gap-6">
 					<RegistryHeader

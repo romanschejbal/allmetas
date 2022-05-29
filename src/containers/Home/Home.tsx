@@ -1,9 +1,19 @@
 import { FC, useMemo } from 'react';
 import { Column } from 'react-table';
+import { RegistryColumnTitle } from '$constants';
+import { RegistryCells } from '$components';
 import { IPost, IRegistryRow } from '$models';
+import {
+	getAvatarCellProps,
+	getDescriptionCellProps,
+	getIndexCellProps,
+	getTextCellProps,
+} from '$utils';
 import MainLayout from '../MainLayout';
 import Feed from '../Feed';
 import Registry from '../Registry';
+
+const { ThText, TdText, TdAvatar, TdDescription, TdIndex } = RegistryCells;
 
 interface IProps {
 	posts: IPost[];
@@ -11,51 +21,81 @@ interface IProps {
 }
 
 const Home: FC<IProps> = ({ posts, rows }) => {
+	const getTextHeader = (title: RegistryColumnTitle) => <ThText text={title} />;
+
 	const columns = useMemo(
 		(): Column<IRegistryRow>[] => [
 			{
-				Header: '#',
+				width: 40,
 				accessor: 'id',
+				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.ID),
 			},
 			{
-				Header: 'Name',
+				width: 48,
+				accessor: 'avatar',
+				Cell: (cellProps) => <TdAvatar {...getAvatarCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.AVATAR),
+			},
+			{
+				width: 140,
 				accessor: 'name',
+				Cell: (cellProps) => <TdDescription {...getDescriptionCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.NAME),
 			},
 			{
-				Header: 'Price',
+				width: 108,
 				accessor: 'price',
+				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.PRICE),
 			},
 			{
-				Header: '24h %',
+				width: 68,
 				accessor: 'dayPercent',
+				Cell: (cellProps) => <TdIndex {...getIndexCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.DAY_PERCENT),
 			},
 			{
-				Header: '7d %',
+				width: 68,
 				accessor: 'weekPercent',
+				Cell: (cellProps) => <TdIndex {...getIndexCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.WEEK_PERCENT),
 			},
 			{
-				Header: 'Market Cap',
+				width: 116,
 				accessor: 'marketCap',
+				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.MARKET_CAP),
 			},
 			{
-				Header: 'Volume (24h)',
+				width: 116,
 				accessor: 'volume',
+				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.VOLUME),
 			},
 			{
-				Header: 'NFT amount',
+				width: 84,
 				accessor: 'nftAmount',
+				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.NFT_AMOUNT),
 			},
 			{
-				Header: '24h volume',
+				width: 68,
 				accessor: 'dayVolume',
+				Cell: (cellProps) => <TdIndex {...getIndexCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.DAY_VOLUME),
 			},
 			{
-				Header: '7d volume',
+				width: 68,
 				accessor: 'weekVolume',
+				Cell: (cellProps) => <TdIndex {...getIndexCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.WEEK_VOLUME),
 			},
 			{
-				Header: 'Last month',
+				width: 140,
 				accessor: 'lastMonth',
+				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.LATT_MONTH),
 			},
 		],
 		[],

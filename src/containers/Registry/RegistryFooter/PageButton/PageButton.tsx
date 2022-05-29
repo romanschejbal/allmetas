@@ -4,12 +4,12 @@ import ArrowNext from '/images/registry/arrow-next.svg';
 import DisabledArrowNext from '/images/registry/disabled-arrow-next.svg';
 
 interface IProps {
-	canPage: boolean;
+	canChangePage: boolean;
 	reverted?: boolean;
 	text: string;
 }
 
-const PageButton: FC<IProps> = ({ canPage, reverted, text }) => (
+const PageButton: FC<IProps> = ({ canChangePage, reverted, text }) => (
 	<div
 		className={classNames('flex items-center gap-3', {
 			['flex-row-reverse']: reverted,
@@ -28,7 +28,7 @@ const PageButton: FC<IProps> = ({ canPage, reverted, text }) => (
 				['rotate-180']: reverted,
 			})}
 		>
-			{canPage ? <ArrowNext /> : <DisabledArrowNext />}
+			{canChangePage ? <ArrowNext /> : <DisabledArrowNext />}
 		</div>
 	</div>
 );

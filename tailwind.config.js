@@ -32,6 +32,9 @@ module.exports = {
 			solitude: '#E3EBFD',
 			royalBlue: '#4475f2',
 			matisse: '#33617D',
+			comet: '#686971',
+			green: '#027A00',
+			cinnabar: '#EA2626',
 		},
 		fontSize: {
 			xxs: '0.6875rem',
@@ -49,6 +52,7 @@ module.exports = {
 			'7xl': '5rem',
 		},
 		container: {
+			center: true,
 			screens: {
 				mobile: '100%',
 				tablet: '100%',
@@ -72,6 +76,9 @@ module.exports = {
 			},
 			gridTemplateColumns: {
 				'auto-fit': 'repeat(auto-fit, minmax(160px, 1fr))',
+			},
+			boxShadow: {
+				primary: '0 6px 25px rgba(0, 0, 0, 0.15)',
 			},
 		},
 	},

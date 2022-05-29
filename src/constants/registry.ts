@@ -11,4 +11,19 @@ export enum RegistryPageButton {
 	NEXT = 'Next',
 }
 
+export enum RegistryColumnTitle {
+	ID = '#',
+	AVATAR = '',
+	NAME = 'Name',
+	PRICE = 'Price',
+	DAY_PERCENT = '24h %',
+	WEEK_PERCENT = '7d %',
+	MARKET_CAP = 'Market Cap',
+	VOLUME = 'Volume (24h)',
+	NFT_AMOUNT = 'NFT amount',
+	DAY_VOLUME = '24h volume',
+	WEEK_VOLUME = '7d volume',
+	LATT_MONTH = 'Last month',
+}
+
 export const REGISTRY_PAGE_SIZES = [10, 25, 50];

@@ -33,9 +33,9 @@ const RegistryFooter: FC<IProps> = ({
 			activeClassName="bg-aliceBlue rounded"
 			className="grid grid-flow-col gap-0.5 text-sm leading-4 text-matisse child:p-2"
 			previousLabel={
-				<PageButton reverted canPage={canPreviousPage} text={RegistryPageButton.PREV} />
+				<PageButton reverted canChangePage={canPreviousPage} text={RegistryPageButton.PREV} />
 			}
-			nextLabel={<PageButton canPage={canNextPage} text={RegistryPageButton.NEXT} />}
+			nextLabel={<PageButton canChangePage={canNextPage} text={RegistryPageButton.NEXT} />}
 		/>
 		<div />
 	</div>

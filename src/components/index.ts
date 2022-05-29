@@ -6,6 +6,7 @@ import MailForm from './MailForm';
 import FooterLinkSection from './FooterLinkSection';
 import FooterIcon from './FooterIcon';
 import FooterDescription from './FooterDescription';
+import * as RegistryCells from './RegistryCells';
 
 export {
 	Post,
@@ -16,4 +17,5 @@ export {
 	FooterLinkSection,
 	FooterIcon,
 	FooterDescription,
+	RegistryCells,
 };
