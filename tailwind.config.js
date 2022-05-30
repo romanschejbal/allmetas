@@ -3,11 +3,11 @@ module.exports = {
 	content: ['./src/**/*.tsx'],
 	theme: {
 		screens: {
-			mobile: '375px',
-			tablet: '768px',
-			desktop: '1024px',
-			desktopLarge: '1170px',
-			wide: '1280px',
+			sm: '576px',
+			md: '768px',
+			lg: '992px',
+			xl: '1200px',
+			xxl: '1400px',
 		},
 		colors: {
 			transparent: 'transparent',
@@ -41,11 +41,13 @@ module.exports = {
 			'7xl': '5rem',
 		},
 		container: {
+			center: true,
 			screens: {
-				mobile: '100%',
-				tablet: '100%',
-				desktop: '100%',
-				wide: '1845px',
+				sm: '540px',
+				md: '720px',
+				lg: '960px',
+				xl: '1140px',
+				xxl: '1320px',
 			},
 		},
 		extend: {
