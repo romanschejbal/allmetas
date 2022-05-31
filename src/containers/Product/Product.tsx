@@ -1,12 +1,15 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import MainLayout from '../MainLayout';
 import { Breadcrumbs, ProductDetailsBlock, ProductInfoBanner } from '$components';
 import { useRouter } from 'next/router';
 import { productInfoLarge, productInfoSmall } from '$mocks';
+import { Tabs as TabsItem, TABS } from '$constants';
+import Tabs from '../Tabs';
+import Overview from '../Overview';
 
 const Product: FC = () => {
 	const { back, query } = useRouter();
-
+	const [activeTab, setActiveTab] = useState<TabsItem>(TabsItem.Overview);
 	return (
 		<MainLayout>
 			<div className="container m-auto pt-6">
@@ -36,6 +39,10 @@ const Product: FC = () => {
 					/>
 				</div>
 			</div>
+			<div className="container m-auto pt-6">
+				<Tabs setActiveTab={setActiveTab} tabs={TABS} />
+			</div>
+			<div className="container m-auto pt-4">{activeTab === TabsItem.Overview && <Overview />}</div>
 		</MainLayout>
 	);
 };
