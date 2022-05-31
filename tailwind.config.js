@@ -23,13 +23,26 @@ module.exports = {
 			blackPearl: '#002033',
 			terracotta: '#9F4505',
 			terracottaLightTrnsp: '#FF6A0000',
+			lavender: '#E7E7ED',
+			whisper: '#E4E4E4',
+			snow: '#FAFAFA',
 			cursedBlack: '#131313',
-			lunarRock: '#c5c5c5',
+			lunarRock: '#C5C5C5',
 			blue: '#004168',
 			coldGrey: '#9f9f9f',
+			veniceBlue: '#2F5E7B',
+			aliceBlue: '#EDF2F4',
+			kashmirBlue: '#58667E',
+			horizon: '#5C8097',
+			grayTypo: '#9A9EA6',
+			solitude: '#E3EBFD',
 			grayTypo: '#9a9ea6',
 			solitude: '#e3ebfd',
 			royalBlue: '#4475f2',
+			matisse: '#33617D',
+			comet: '#686971',
+			green: '#027A00',
+			cinnabar: '#EA2626',
 		},
 		fontSize: {
 			xxs: '0.6875rem',
@@ -47,6 +60,7 @@ module.exports = {
 			'7xl': '5rem',
 		},
 		container: {
+			center: true,
 			screens: {
 				mobile: '100%',
 				tablet: '100%',
@@ -86,5 +100,8 @@ module.exports = {
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/line-clamp'),
 		require('tailwind-scrollbar-hide'),
+		function ({ addVariant }) {
+			addVariant('child', '& > *');
+		}
 	],
 };
