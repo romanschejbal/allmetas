@@ -10,12 +10,13 @@ import Overview from '../Overview';
 const Product: FC = () => {
 	const { back, query } = useRouter();
 	const [activeTab, setActiveTab] = useState<TabsItem>(TabsItem.Overview);
+
 	return (
 		<MainLayout>
-			<div className="container m-auto pt-6">
+			<div className="container pt-6">
 				<Breadcrumbs moveBack={back} currentPage={query.productId} />
 			</div>
-			<div className="container m-auto flex items-center justify-between">
+			<div className="container flex items-center justify-between">
 				<div>
 					<ProductDetailsBlock />
 				</div>
@@ -39,10 +40,10 @@ const Product: FC = () => {
 					/>
 				</div>
 			</div>
-			<div className="container m-auto pt-6">
+			<div className="container pt-6">
 				<Tabs setActiveTab={setActiveTab} tabs={TABS} />
 			</div>
-			<div className="container m-auto pt-4">{activeTab === TabsItem.Overview && <Overview />}</div>
+			<div className="container pt-4">{activeTab === TabsItem.Overview && <Overview />}</div>
 		</MainLayout>
 	);
 };

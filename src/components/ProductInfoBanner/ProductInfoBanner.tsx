@@ -38,7 +38,7 @@ const ProductInfoBanner: FC<IProps> = ({
 			</div>
 		</div>
 		<div
-			className="cursor-pointerrounded-md mt-2 border-[1px] border-safetyOrange text-center font-bold text-safetyOrange"
+			className="mt-2 cursor-pointer rounded-md border-[1px] border-safetyOrange text-center font-bold text-safetyOrange"
 			onClick={callback}
 		>
 			<a>{btnValue}</a>
