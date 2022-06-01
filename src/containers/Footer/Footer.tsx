@@ -1,5 +1,5 @@
 import { FooterDescription, FooterIcon, FooterLinkSection } from '$components';
-import { FOOTER_SOCIAL_NETWORK, FOOTER_TITLE } from '$mocks';
+import { DEFAULT_LONG_TEXT, FOOTER_SOCIAL_NETWORK, FOOTER_TITLE } from '$mocks';
 import { FC } from 'react';
 
 const Footer: FC = () => (
@@ -8,7 +8,7 @@ const Footer: FC = () => (
 			<div>
 				<h2 className="text-2xl font-bold">{FOOTER_TITLE}</h2>
 				<div className="mt-3 mb-7">
-					<FooterDescription />
+					<FooterDescription text={DEFAULT_LONG_TEXT} />
 				</div>
 				<div className="flex gap-2">
 					{FOOTER_SOCIAL_NETWORK.map(({ href, id, src }) => (
