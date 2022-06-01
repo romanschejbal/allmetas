@@ -5,7 +5,7 @@ interface IProps {
 	description: string;
 }
 
-const Feed: FC<IProps> = ({ title, description }) => (
+const Post: FC<IProps> = ({ title, description }) => (
 	<li className="grid w-[255px] snap-center gap-3 md:w-[340px] md:snap-none md:gap-4">
 		<div className="h-[144px] w-full rounded-lg bg-[url('/images/feed/post.jpg')] md:h-[192px]" />
 		<div className="grid gap-1 md:gap-1.5">
@@ -15,4 +15,4 @@ const Feed: FC<IProps> = ({ title, description }) => (
 	</li>
 );
 
-export default Feed;
+export default Post;
