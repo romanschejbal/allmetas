@@ -7,11 +7,11 @@ interface IProps {
 }
 
 const Subscription: FC<IProps> = ({ title, text }) => (
-	<div className=" bg-gradient-to-r from-terracotta to-terracottaLightTrnsp">
-		<div className="grid grid-cols-2 px-32 pt-16 pb-24">
-			<div className="grid grid-flow-row gap-10">
-				<div className="grid grid-flow-row gap-4">
-					<h2 className="text-4xl font-bold text-white">{title}</h2>
+	<div className="bg-subscriptionBanner bg-cover">
+		<div className="xl:px-20 container grid pt-12 pb-18 md:pt-16 md:pb-24">
+			<div className="grid grid-flow-row gap-7 md:w-9/12 md:gap-10 xl:w-2/4">
+				<div className="grid grid-flow-row gap-3 md:gap-4">
+					<h2 className="text-3xl font-bold text-white md:text-4xl">{title}</h2>
 					<p className="text-xs font-bold text-white">{text}</p>
 				</div>
 				<MailForm />
