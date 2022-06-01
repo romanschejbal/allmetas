@@ -26,7 +26,7 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 	const columns = useMemo(
 		(): Column<IRegistryRow>[] => [
 			{
-				width: 40,
+				width: 50,
 				accessor: 'id',
 				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
 				Header: getTextHeader(RegistryColumnTitle.ID),
@@ -38,7 +38,7 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 				Header: getTextHeader(RegistryColumnTitle.AVATAR),
 			},
 			{
-				width: 140,
+				width: 130,
 				accessor: 'name',
 				Cell: (cellProps) => <TdDescription {...getDescriptionCellProps(cellProps)} />,
 				Header: getTextHeader(RegistryColumnTitle.NAME),
@@ -92,7 +92,7 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 				Header: getTextHeader(RegistryColumnTitle.WEEK_VOLUME),
 			},
 			{
-				width: 140,
+				width: 150,
 				accessor: 'lastMonth',
 				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
 				Header: getTextHeader(RegistryColumnTitle.LATT_MONTH),

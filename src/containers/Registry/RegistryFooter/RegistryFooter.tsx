@@ -21,8 +21,10 @@ const RegistryFooter: FC<IProps> = ({
 	rowsCounterText,
 	onPageChange,
 }) => (
-	<div className="grid grid-flow-col place-content-between items-center">
-		<RowsCounter text={rowsCounterText} />
+	<div className="grid-reverse grid gap-3 md:grid-flow-col md:auto-rows-fr md:items-center md:gap-0">
+		<div className="order-last md:order-none">
+			<RowsCounter text={rowsCounterText} />
+		</div>
 		<ReactPaginate
 			pageRangeDisplayed={REGISTRY_PAGE_RANGE}
 			marginPagesDisplayed={REGISTRY_MARGIN_PAGES}
@@ -31,7 +33,9 @@ const RegistryFooter: FC<IProps> = ({
 			onPageChange={onPageChange}
 			disabledClassName="text-grayTypo"
 			activeClassName="bg-aliceBlue rounded"
-			className="grid grid-flow-col gap-0.5 text-sm leading-4 text-matisse child:p-2"
+			nextClassName="hidden md:block"
+			previousClassName="hidden md:block"
+			className="grid grid-flow-col gap-0.5 text-center text-sm leading-4 text-matisse child:p-2"
 			previousLabel={
 				<PageButton reverted canChangePage={canPreviousPage} text={RegistryPageButton.PREV} />
 			}

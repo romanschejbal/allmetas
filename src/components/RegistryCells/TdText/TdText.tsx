@@ -7,7 +7,9 @@ interface IProps {
 
 const TdText: FC<IProps> = ({ text }) => (
 	<Td>
-		<span className="text-xs text-darkTypo line-clamp-1">{text}</span>
+		<span className="overflow-hidden text-ellipsis whitespace-pre text-xs text-darkTypo">
+			{text}
+		</span>
 	</Td>
 );
 

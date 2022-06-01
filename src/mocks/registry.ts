@@ -24,7 +24,7 @@ const ROW = {
 	id: '1',
 	price: '$43,663.31',
 	marketCap: '$806,936,551,216',
-	volume: '250 000 ks',
+	volume: '$25,008,922,532',
 	nftAmount: '250 000 ks',
 	lastMonth: 'Last month graph',
 	name: NAME,
