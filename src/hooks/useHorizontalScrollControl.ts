@@ -9,15 +9,19 @@ export const useHorizontalScrollControl = (ref: RefObject<HTMLElement>) => {
 	useLayoutEffect(() => {
 		if (ref?.current) {
 			const { scrollWidth, clientWidth } = ref.current;
+			const rightStauts = scrollWidth > clientWidth;
 
-			setSrolledRight(scrollWidth > clientWidth);
+			setSrolledRight(rightStauts);
 		}
 	}, [ref]);
 
 	const onScroll = useCallback(
 		({ currentTarget: { scrollLeft, scrollWidth, clientWidth } }: SyntheticEvent) => {
-			setSrolledLeft(scrollLeft !== INIT_SCROLL_VALUE);
-			setSrolledRight(scrollWidth - scrollLeft !== clientWidth);
+			const leftStatus = scrollLeft !== INIT_SCROLL_VALUE;
+			const rightStatus = (scrollWidth - scrollLeft).toFixed() !== clientWidth.toFixed();
+
+			setSrolledLeft(leftStatus);
+			setSrolledRight(rightStatus);
 		},
 		[setSrolledLeft, setSrolledRight],
 	);
