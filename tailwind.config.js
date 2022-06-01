@@ -21,8 +21,6 @@ module.exports = {
 			limeGreen: '#16C612',
 			cinnabar: '#EA2626',
 			blackPearl: '#002033',
-			terracotta: '#9F4505',
-			terracottaLightTrnsp: '#FF6A0000',
 			lavender: '#E7E7ED',
 			whisper: '#E4E4E4',
 			snow: '#FAFAFA',
@@ -68,8 +66,20 @@ module.exports = {
 				xl: '1140px',
 				xxl: '1320px',
 			},
+			padding: {
+				DEFAULT: '16px',
+				sm: 0,
+				md: 0,
+				lg: 0,
+				xl: 0,
+				xxl: 0,
+			},
 		},
 		extend: {
+			backgroundImage: {
+				subscriptionBanner:
+					"linear-gradient(to right bottom, rgba(159, 69, 5, 1), rgba(255, 106, 0, 0)), url('/images/subscription/background.png')",
+			},
 			width: {
 				128: '32rem',
 				'11/20': '55%',

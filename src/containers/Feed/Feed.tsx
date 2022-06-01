@@ -16,11 +16,11 @@ const Feed: FC<IProps> = ({ items }) => {
 	const { srolledLeft, srolledRight, onScroll } = useHorizontalScrollControl(ref);
 
 	return (
-		<div className="container relative">
+		<div className="relative overflow-hidden md:container">
 			<ul
 				ref={ref}
 				onMouseDown={onMouseDown}
-				className="grid snap-x auto-cols-min grid-flow-col gap-3 overflow-x-scroll scrollbar-hide md:snap-none md:gap-4"
+				className="grid snap-x auto-cols-min grid-flow-col gap-3 overflow-x-scroll px-4 scrollbar-hide md:snap-none md:gap-4 md:px-0"
 				onScroll={onScroll}
 			>
 				{items.map(({ id, title, description }) => (
