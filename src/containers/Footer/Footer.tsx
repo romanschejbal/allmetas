@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 const Footer: FC = () => (
 	<footer className="container mx-auto">
-		<div className="mt-12 grid grid-cols-3">
+		<div className="grid grid-cols-1 pt-12 md:grid-cols-2 xl:grid-cols-3 ">
 			<div>
 				<h2 className="text-2xl font-bold">{FOOTER_TITLE}</h2>
 				<div className="mt-3 mb-7">
@@ -16,8 +16,8 @@ const Footer: FC = () => (
 					))}
 				</div>
 			</div>
-			<div />
-			<div className="grid grid-cols-2">
+			<div className="hidden xl:block" />
+			<div className="grid grid-cols-2 pt-6 md:pt-0">
 				<FooterLinkSection />
 				<FooterLinkSection />
 			</div>

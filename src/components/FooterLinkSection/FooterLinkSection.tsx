@@ -3,7 +3,7 @@ import { FOOTER_LINK } from '$mocks';
 import FooterLinkItem from './FooterLinkItem';
 
 const FooterLinkSection: FC = () => (
-	<div className="grid">
+	<div className="grid justify-center md:justify-end">
 		{FOOTER_LINK.map(({ title, href }, index) => (
 			<FooterLinkItem key={index} title={title} href={href} isFirst={index === 0} />
 		))}
