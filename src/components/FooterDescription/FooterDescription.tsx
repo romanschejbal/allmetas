@@ -1,8 +1,11 @@
 import { FC, useCallback, useLayoutEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
-import { DEFAULT_LONG_TEXT } from '$mocks';
 
-const FooterDescription: FC = () => {
+interface IProps {
+	text: string;
+}
+
+const FooterDescription: FC<IProps> = ({ text }) => {
 	const [showMore, setShowMore] = useState(false);
 	const [showFull, setShowFull] = useState(true);
 	const contentRef = useRef(null);
@@ -33,7 +36,7 @@ const FooterDescription: FC = () => {
 				})}
 				ref={contentRef}
 			>
-				{DEFAULT_LONG_TEXT}
+				{text}
 			</p>
 			{showMore && (
 				<span

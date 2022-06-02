@@ -113,6 +113,6 @@ module.exports = {
 		require('tailwind-scrollbar-hide'),
 		function ({ addVariant }) {
 			addVariant('child', '& > *');
-		}
+		},
 	],
 };

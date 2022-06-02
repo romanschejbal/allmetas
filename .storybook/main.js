@@ -1,4 +1,5 @@
 const path = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
 	stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -23,6 +24,21 @@ module.exports = {
 		builder: 'webpack5',
 	},
 	webpackFinal: (config) => {
+		const fileLoaderRule = config.module.rules.find((rule) => rule.test && rule.test.test('.svg'));
+		fileLoaderRule.exclude = /\.svg$/;
+
+		config.resolve.plugins = config.resolve.plugins || [];
+		config.resolve.plugins.push(
+			new TsconfigPathsPlugin({
+				configFile: path.resolve(__dirname, '../tsconfig.json'),
+			}),
+		);
+
+		config.module.rules.push({
+			test: /\.svg$/,
+			enforce: 'pre',
+			loader: require.resolve('@svgr/webpack'),
+		});
 		/**
 		 * Add support for alias-imports
 		 * @see https://github.com/storybookjs/storybook/issues/11989#issuecomment-715524391

@@ -13,7 +13,7 @@ const Header: FC<IProps> = ({ darkMode }) => (
 			['bg-cursedBlack']: darkMode,
 		})}
 	>
-		<div className="container m-auto grid grid-cols-4 items-center py-3.5">
+		<div className="container grid grid-cols-4 items-center py-3.5">
 			<Logo darkMode={darkMode} />
 			<HeaderInfo items={HEADER_ITEMS} darkMode={darkMode} />
 			<SearchInput darkMode={darkMode} />
