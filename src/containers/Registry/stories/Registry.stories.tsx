@@ -1,15 +1,17 @@
+import { Column } from 'react-table';
 import { ComponentMeta } from '@storybook/react';
 import { RegistryCells } from '$components';
 import { RegistryColumnTitle } from '$constants';
 import { ROWS } from '$mocks';
 import { IRegistryRow } from '$models';
 import {
-	getTextCellProps,
+	getGraphCellProps,
 	getAvatarCellProps,
 	getDescriptionCellProps,
 	getIndexCellProps,
+	getTextCellProps,
 } from '$utils';
-import { Column } from 'react-table';
+
 import Registry from '../Registry';
 
 export default {
@@ -17,7 +19,7 @@ export default {
 	component: Registry,
 } as ComponentMeta<typeof Registry>;
 
-const { ThText, TdText, TdAvatar, TdDescription, TdIndex } = RegistryCells;
+const { ThText, TdText, TdAvatar, TdDescription, TdIndex, TdGraph } = RegistryCells;
 
 const getTextHeader = (title: RegistryColumnTitle) => <ThText text={title} />;
 
@@ -91,8 +93,8 @@ const columns: Column<IRegistryRow>[] = [
 	{
 		width: 140,
 		accessor: 'lastMonth',
-		Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
-		Header: getTextHeader(RegistryColumnTitle.LATT_MONTH),
+		Cell: (cellProps) => <TdGraph {...getGraphCellProps(cellProps)} />,
+		Header: getTextHeader(RegistryColumnTitle.LAST_MONTH),
 	},
 ];
 
