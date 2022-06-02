@@ -22,6 +22,14 @@ module.exports = {
 					},
 				},
 			},
+			{
+				test: /\.stories\.jsx?$/,
+				use: [
+					{
+						loader: require.resolve('storybook-addon-package-json/loader'),
+					},
+				],
+			},
 		);
 		return config;
 	},
