@@ -5,8 +5,7 @@ import Header from './Header';
 import Product from './Product';
 import Subscription from './Subscription';
 import Footer from './Footer';
-import Tabs from './Tabs';
 import Overview from './Overview';
 import Registry from './Registry';
 
-export { Home, MainLayout, Feed, Header, Registry, Subscription, Footer, Product, Tabs, Overview };
+export { Home, MainLayout, Feed, Header, Registry, Subscription, Footer, Product, Overview };

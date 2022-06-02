@@ -1,29 +1,31 @@
-import Post from './Post';
+import * as RegistryCells from './RegistryCells';
+import Breadcrumbs from './Breadcrumbs';
+import FooterDescription from './FooterDescription';
+import FooterIcon from './FooterIcon';
+import FooterLinkSection from './FooterLinkSection';
 import HeaderInfo from './HeaderInfo';
 import Logo from './Logo';
-import SearchInput from './SearchInput';
+import MailForm from './MailForm';
+import Post from './Post';
+import ProductDetailsBlock from './ProductDetailsBlock';
 import ProductInfoBanner from './ProductInfoBanner';
 import Quotation from './Quotation';
-import Breadcrumbs from './Breadcrumbs';
-import ProductDetailsBlock from './ProductDetailsBlock';
-import MailForm from './MailForm';
-import FooterLinkSection from './FooterLinkSection';
-import FooterIcon from './FooterIcon';
-import FooterDescription from './FooterDescription';
-import * as RegistryCells from './RegistryCells';
+import SearchInput from './SearchInput';
+import Tabs from './Tabs';
 
 export {
-	Post,
+	Breadcrumbs,
+	FooterDescription,
+	FooterIcon,
+	FooterLinkSection,
 	HeaderInfo,
 	Logo,
-	SearchInput,
+	MailForm,
+	Post,
+	ProductDetailsBlock,
 	ProductInfoBanner,
 	Quotation,
-	Breadcrumbs,
-	ProductDetailsBlock,
-	MailForm,
-	FooterLinkSection,
-	FooterIcon,
-	FooterDescription,
 	RegistryCells,
+	SearchInput,
+	Tabs,
 };
