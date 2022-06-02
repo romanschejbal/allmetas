@@ -8,8 +8,8 @@ interface IProps {
 }
 const SearchInput: FC<IProps> = ({ darkMode }) => {
 	return (
-		<div className="max-w-[391px]">
-			<div className="relative justify-self-end">
+		<div className="w-10/12 justify-self-end">
+			<div className="relative">
 				{darkMode ? (
 					<DarkSearchLogo className="absolute top-2/4 left-2 box-border translate-y-[-50%]" />
 				) : (
