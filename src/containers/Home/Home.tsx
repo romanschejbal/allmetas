@@ -6,6 +6,7 @@ import { IPost, IRegistryRow } from '$models';
 import {
 	getAvatarCellProps,
 	getDescriptionCellProps,
+	getGraphCellProps,
 	getIndexCellProps,
 	getTextCellProps,
 } from '$utils';
@@ -13,7 +14,7 @@ import MainLayout from '../MainLayout';
 import Feed from '../Feed';
 import Registry from '../Registry';
 
-const { ThText, TdText, TdAvatar, TdDescription, TdIndex } = RegistryCells;
+const { ThText, TdText, TdAvatar, TdDescription, TdIndex, TdGraph } = RegistryCells;
 
 interface IProps {
 	posts: IPost[];
@@ -26,7 +27,7 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 	const columns = useMemo(
 		(): Column<IRegistryRow>[] => [
 			{
-				width: 40,
+				width: 50,
 				accessor: 'id',
 				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
 				Header: getTextHeader(RegistryColumnTitle.ID),
@@ -38,7 +39,7 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 				Header: getTextHeader(RegistryColumnTitle.AVATAR),
 			},
 			{
-				width: 140,
+				width: 130,
 				accessor: 'name',
 				Cell: (cellProps) => <TdDescription {...getDescriptionCellProps(cellProps)} />,
 				Header: getTextHeader(RegistryColumnTitle.NAME),
@@ -92,10 +93,10 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 				Header: getTextHeader(RegistryColumnTitle.WEEK_VOLUME),
 			},
 			{
-				width: 140,
+				width: 150,
 				accessor: 'lastMonth',
-				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
-				Header: getTextHeader(RegistryColumnTitle.LATT_MONTH),
+				Cell: (cellProps) => <TdGraph {...getGraphCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.LAST_MONTH),
 			},
 		],
 		[],

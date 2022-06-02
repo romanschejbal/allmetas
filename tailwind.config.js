@@ -4,6 +4,13 @@ module.exports = {
 	theme: {
 		container: {
 			center: true,
+			padding: {
+				DEFAULT: '1rem',
+				sm: 0,
+				lg: 0,
+				xl: 0,
+				'2xl': 0,
+			},
 		},
 		extend: {
 			colors: {
@@ -75,6 +82,10 @@ module.exports = {
 			boxShadow: {
 				header: '0 4px 77px 0 rgba(0, 0, 0, 0.35)',
 				primary: '0 6px 25px rgba(0, 0, 0, 0.15)',
+			},
+			backgroundImage: {
+				subscriptionBanner:
+					"linear-gradient(to right bottom, rgba(159, 69, 5, 1), rgba(255, 106, 0, 0)), url('/images/subscription/background.png')",
 			},
 		},
 	},

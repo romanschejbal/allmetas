@@ -15,13 +15,18 @@ export interface IRegistryRowIndex {
 	text: string;
 }
 
+export interface IRegistryRowGraph {
+	decreased: boolean;
+	data: number[];
+}
+
 export interface IRegistryRow {
 	id: ID;
 	price: string;
 	marketCap: string;
 	volume: string;
 	nftAmount: string;
-	lastMonth: string;
+	lastMonth: IRegistryRowGraph;
 	name: IRegistryRowName;
 	avatar: IRegistryRowAvatar;
 	dayPercent: IRegistryRowIndex;
