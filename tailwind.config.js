@@ -2,13 +2,6 @@
 module.exports = {
 	content: ['./src/**/*.tsx'],
 	theme: {
-		screens: {
-			sm: '576px',
-			md: '768px',
-			lg: '992px',
-			xl: '1200px',
-			xxl: '1400px',
-		},
 		colors: {
 			transparent: 'transparent',
 			white: '#ffffff',
@@ -59,20 +52,12 @@ module.exports = {
 		},
 		container: {
 			center: true,
-			screens: {
-				sm: '540px',
-				md: '720px',
-				lg: '960px',
-				xl: '1140px',
-				xxl: '1320px',
-			},
 			padding: {
-				DEFAULT: '16px',
+				DEFAULT: '1rem',
 				sm: 0,
-				md: 0,
 				lg: 0,
 				xl: 0,
-				xxl: 0,
+				'2xl': 0,
 			},
 		},
 		extend: {
