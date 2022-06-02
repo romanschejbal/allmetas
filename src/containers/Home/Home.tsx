@@ -1,5 +1,6 @@
 import { FC, useMemo } from 'react';
 import { Column } from 'react-table';
+import Link from 'next/link';
 import { RegistryColumnTitle } from '$constants';
 import { RegistryCells } from '$components';
 import { IPost, IRegistryRow } from '$models';
@@ -41,7 +42,13 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 			{
 				width: 130,
 				accessor: 'name',
-				Cell: (cellProps) => <TdDescription {...getDescriptionCellProps(cellProps)} />,
+				Cell: (cellProps) => (
+					<Link href="/product/1">
+						<a>
+							<TdDescription {...getDescriptionCellProps(cellProps)} />
+						</a>
+					</Link>
+				),
 				Header: getTextHeader(RegistryColumnTitle.NAME),
 			},
 			{
