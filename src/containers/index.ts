@@ -2,9 +2,11 @@ import Home from './Home';
 import MainLayout from './MainLayout';
 import Feed from './Feed';
 import Header from './Header';
-import Registry from './Registry';
+import Product from './Product';
 import Subscription from './Subscription';
 import Footer from './Footer';
-import Product from './Product';
+import Tabs from './Tabs';
+import Overview from './Overview';
+import Registry from './Registry';
 
-export { Home, MainLayout, Feed, Header, Registry, Subscription, Footer, Product };
+export { Home, MainLayout, Feed, Header, Registry, Subscription, Footer, Product, Tabs, Overview };
