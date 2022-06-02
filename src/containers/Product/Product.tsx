@@ -4,7 +4,7 @@ import { Breadcrumbs, ProductDetailsBlock, ProductInfoBanner } from '$components
 import { useRouter } from 'next/router';
 import { productInfoLarge, productInfoSmall } from '$mocks';
 import { Tabs as TabsItem, TABS } from '$constants';
-import Tabs from '../Tabs';
+import Tabs from '../../components/Tabs';
 import Overview from '../Overview';
 
 const Product: FC = () => {
