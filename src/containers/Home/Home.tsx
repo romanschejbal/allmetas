@@ -6,6 +6,7 @@ import { IPost, IRegistryRow } from '$models';
 import {
 	getAvatarCellProps,
 	getDescriptionCellProps,
+	getGraphCellProps,
 	getIndexCellProps,
 	getTextCellProps,
 } from '$utils';
@@ -13,7 +14,7 @@ import MainLayout from '../MainLayout';
 import Feed from '../Feed';
 import Registry from '../Registry';
 
-const { ThText, TdText, TdAvatar, TdDescription, TdIndex } = RegistryCells;
+const { ThText, TdText, TdAvatar, TdDescription, TdIndex, TdGraph } = RegistryCells;
 
 interface IProps {
 	posts: IPost[];
@@ -94,8 +95,8 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 			{
 				width: 150,
 				accessor: 'lastMonth',
-				Cell: (cellProps) => <TdText {...getTextCellProps(cellProps)} />,
-				Header: getTextHeader(RegistryColumnTitle.LATT_MONTH),
+				Cell: (cellProps) => <TdGraph {...getGraphCellProps(cellProps)} />,
+				Header: getTextHeader(RegistryColumnTitle.LAST_MONTH),
 			},
 		],
 		[],

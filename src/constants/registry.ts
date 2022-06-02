@@ -23,7 +23,7 @@ export enum RegistryColumnTitle {
 	NFT_AMOUNT = 'NFT amount',
 	DAY_VOLUME = '24h volume',
 	WEEK_VOLUME = '7d volume',
-	LATT_MONTH = 'Last month',
+	LAST_MONTH = 'Last month',
 }
 
 export const REGISTRY_PAGE_SIZES = [10, 25, 50];
