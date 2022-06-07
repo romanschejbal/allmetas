@@ -43,7 +43,7 @@ const Home: FC<IProps> = ({ posts, rows }) => {
 				width: 130,
 				accessor: 'name',
 				Cell: (cellProps) => (
-					<Link href="/product/1">
+					<Link href={`/product/${cellProps.value.title}`}>
 						<a>
 							<TdDescription {...getDescriptionCellProps(cellProps)} />
 						</a>

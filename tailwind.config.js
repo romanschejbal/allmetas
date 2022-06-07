@@ -37,6 +37,7 @@ module.exports = {
 				veniceBlue: '#2F5E7B',
 				aliceBlue: '#EDF2F4',
 				kashmirBlue: '#58667E',
+				veryLightGrey: '#CECECE',
 				horizon: '#5C8097',
 				grayTypo: '#9A9EA6',
 				solitude: '#E3EBFD',

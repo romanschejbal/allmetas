@@ -12,6 +12,7 @@ import ProductInfoBanner from './ProductInfoBanner';
 import Quotation from './Quotation';
 import SearchInput from './SearchInput';
 import Tabs from './Tabs';
+import QuotationCard from './QuotationCard';
 
 export {
 	Breadcrumbs,
@@ -25,6 +26,7 @@ export {
 	ProductDetailsBlock,
 	ProductInfoBanner,
 	Quotation,
+	QuotationCard,
 	RegistryCells,
 	SearchInput,
 	Tabs,
