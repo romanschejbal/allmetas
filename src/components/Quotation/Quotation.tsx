@@ -10,10 +10,18 @@ interface IProps {
 
 const Quotation: FC<IProps> = ({ up, value }) => (
 	<div
-		className={classNames('items-center', 'flex', 'gap-1', 'rounded-[15px]', 'p-1', {
-			['bg-limeGreen']: up,
-			['bg-cinnabar']: !up,
-		})}
+		className={classNames(
+			'items-center',
+			'flex',
+			'gap-1',
+			'rounded-[15px]',
+			'p-1',
+			'max-w-[70px]',
+			{
+				['bg-limeGreen']: up,
+				['bg-cinnabar']: !up,
+			},
+		)}
 	>
 		{up ? <QuotationStatusUp /> : <QuotationStatusDown />}
 		<p className="font-semibold text-white">{value}</p>

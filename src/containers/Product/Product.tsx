@@ -16,7 +16,7 @@ const Product: FC = () => {
 			<div className="container pt-6">
 				<Breadcrumbs moveBack={back} currentPage={query.productId} />
 			</div>
-			<div className="container m-auto flex flex-col items-baseline justify-between gap-6 lg:flex-row  lg:items-center lg:gap-0">
+			<div className="container flex flex-col items-baseline justify-between gap-6 lg:flex-row  lg:items-center lg:gap-0">
 				<div>
 					<ProductDetailsBlock />
 				</div>
